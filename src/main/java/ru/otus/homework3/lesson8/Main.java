@@ -1,4 +1,4 @@
-package ru.otus.homework3Lesson8;
+package ru.otus.homework3.lesson8;
 
 import java.util.ArrayList;
 import java.util.List;

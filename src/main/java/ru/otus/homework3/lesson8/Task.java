@@ -1,4 +1,4 @@
-package ru.otus.homework3Lesson8;
+package ru.otus.homework3.lesson8;
 
 /**
  * @author Sergei on 28.09.2024 19:30.
