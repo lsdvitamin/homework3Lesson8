@@ -24,10 +24,10 @@ public class Main {
         tasks.add(task4);
         tasks.add(task5);
 
-        List<Task> taskWorking = tasks.stream()
+        List<Task> tasksWorking = tasks.stream()
                 .filter(task -> task.status.equals(Task.Status.WORKING)).toList();
 
-        Integer cntJogging = Math.toIntExact(tasks.stream()
+        Integer cntClosed = Math.toIntExact(tasks.stream()
                 .filter(task -> task.status.equals(Task.Status.CLOSED)).count());
 
         Boolean exists2AndNotExists99 =
@@ -35,7 +35,7 @@ public class Main {
                         tasks.stream().anyMatch(task -> task.id == 2);
 
 
-        List<Task> taskSorted = tasks.stream()
+        List<Task> tasksSorted = tasks.stream()
                 .sorted((t1, t2) -> t1.status.compareTo(t2.status)).
                 collect(Collectors.toList());
 
