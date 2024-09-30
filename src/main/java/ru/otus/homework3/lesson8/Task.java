@@ -10,8 +10,7 @@ public class Task implements Comparable<Task> {
 
     @Override
     public int compareTo(Task task) {
-        if ((task.status.equals(Task.Status.OPEN) && (this.status.equals(Task.Status.WORKING) || this.status.equals(Task.Status.CLOSED))) ||
-                (task.status.equals(Task.Status.WORKING) && (this.status.equals(Task.Status.CLOSED)))) {
+        if (task.status == Status.OPEN && this.status == Status.WORKING || this.status == Status.CLOSED) {
             return 1;
         }
         return -1;
