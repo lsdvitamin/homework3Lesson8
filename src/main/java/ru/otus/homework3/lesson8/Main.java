@@ -36,10 +36,10 @@ public class Main {
         tasks.add(task9);
 
         List<Task> tasksWorking = tasks.stream()
-                .filter(task -> task.status.equals(Task.Status.WORKING)).toList();
+                .filter(task -> task.status == Task.Status.WORKING).toList();
 
         Long cntClosed = (tasks.stream()
-                .filter(task -> task.status.equals(Task.Status.CLOSED)).count());
+                .filter(task -> task.status == Task.Status.CLOSED).count());
 
         Boolean exists2AndNotExists99 =
                 tasks.stream().noneMatch(task -> task.id == 99) &&
